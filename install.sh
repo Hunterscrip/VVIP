@@ -7,7 +7,7 @@ REPO="https://raw.githubusercontent.com/myridwan/scriptvps/ipuk/"
 CDNF="https://raw.githubusercontent.com/myridwan/vvip/ipuk"
 ###
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/artanodrop/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Hunterscrip/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -25,7 +25,7 @@ BURIQ () {
 }
 # https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/artanodrop/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Hunterscrip/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -42,7 +42,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/artanodrop/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Hunterscrip/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -309,7 +309,7 @@ wget https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/nontls.sh &&
 clear
 echo -e "$green[INFO]$NC Download Extra Menu"
 sleep 2
-wget https://raw.githubusercontent.com/artanodrop/vvip/ipuk/update/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/Hunterscrip/vvip/ipuk/update/update.sh && chmod +x update.sh && ./update.sh
 rm -f update.sh
 clear
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
